@@ -1,0 +1,17 @@
+services:
+
+- type: web
+
+  name: viral-video-bot
+
+  env: python
+
+  buildCommand: pip install -r requirements.txt
+
+  startCommand: python app.py
+
+  envVars:
+
+  - key: GEMINI_KEY
+
+    sync: false
