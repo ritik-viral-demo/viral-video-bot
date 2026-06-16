@@ -7,12 +7,13 @@ from flask import Flask, request, jsonify
 import google.generativeai as genai
 from gtts import gTTS
 
-from moviepy.editor import (
+from moviepy import (
     ImageClip,
     AudioFileClip,
     CompositeVideoClip,
     TextClip
 )
+
 
 
 app = Flask(__name__)
@@ -30,7 +31,7 @@ genai.configure(
 
 
 model = genai.GenerativeModel(
-    "gemini-2.0-flash"
+    "gemini-2.5-flash"
 )
 
 
